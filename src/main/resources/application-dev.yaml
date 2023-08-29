@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ${LOG_METADATA_SOURCE}
+  kafka:
+    bootstrap-servers:
+    properties:
+      application.id: local.sports.data.streams.consumer.java
+      group_id: local.sports.data.streams.consumer.java
+      sasl.mechanism: SCRAM-SHA-512
+      sasl.jaas.config:
+      security.protocol: SASL_SSL
+      schema.registry.url:
+
+input:
+  data:
+    type:
+
+avro:
+  serdes:
+    enabled:
+
+client:
+  name:

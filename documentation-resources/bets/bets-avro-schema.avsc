@@ -1,0 +1,1080 @@
+{
+  "type": "record",
+  "name": "Wager",
+  "namespace": "models.avro.wager",
+  "fields": [
+    {
+      "name": "origin",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "Wager_origin",
+          "fields": [
+            {
+              "name": "stream",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "type",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "environment",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "version",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "id",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "type",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "status",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "source",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "member",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "Wager_member",
+          "fields": [
+            {
+              "name": "id",
+              "type": [
+                "null",
+                "long"
+              ],
+              "default": null
+            },
+            {
+              "name": "username",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "session",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "Wager_session",
+          "fields": [
+            {
+              "name": "id",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "currency",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "Wager_currency",
+          "fields": [
+            {
+              "name": "id",
+              "type": [
+                "null",
+                "int"
+              ],
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "exchangeRate",
+              "type": [
+                "null",
+                "double"
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "brand",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "Wager_brand",
+          "fields": [
+            {
+              "name": "id",
+              "type": [
+                "null",
+                "int"
+              ],
+              "default": null
+            },
+            {
+              "name": "name",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "odds",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "Wager_odds",
+          "fields": [
+            {
+              "name": "player",
+              "type": [
+                "null",
+                {
+                  "type": "record",
+                  "name": "Wager_odds_player",
+                  "fields": [
+                    {
+                      "name": "format",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null
+                    },
+                    {
+                      "name": "value",
+                      "type": [
+                        "null",
+                        "double"
+                      ],
+                      "default": null
+                    }
+                  ]
+                }
+              ],
+              "default": null
+            },
+            {
+              "name": "system",
+              "type": [
+                "null",
+                {
+                  "type": "record",
+                  "name": "Wager_odds_system",
+                  "fields": [
+                    {
+                      "name": "format",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null
+                    },
+                    {
+                      "name": "value",
+                      "type": [
+                        "null",
+                        "double"
+                      ],
+                      "default": null
+                    }
+                  ]
+                }
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "stake",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "Wager_stake",
+          "fields": [
+            {
+              "name": "amount",
+              "type": [
+                "null",
+                "double"
+              ],
+              "default": null
+            },
+            {
+              "name": "wallet",
+              "type": [
+                "null",
+                {
+                  "type": "record",
+                  "name": "Wager_stake_wallet",
+                  "fields": [
+                    {
+                      "name": "compartment",
+                      "type": [
+                        "null",
+                        {
+                          "type": "record",
+                          "name": "Wager_stake_wallet_compartment",
+                          "fields": [
+                            {
+                              "name": "real",
+                              "type": [
+                                "null",
+                                {
+                                  "type": "record",
+                                  "name": "Wager_stake_wallet_compartment_real",
+                                  "fields": [
+                                    {
+                                      "name": "amount",
+                                      "type": [
+                                        "null",
+                                        "double"
+                                      ],
+                                      "default": null
+                                    }
+                                  ]
+                                }
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "virtual",
+                              "type": [
+                                "null",
+                                {
+                                  "type": "record",
+                                  "name": "Wager_stake_wallet_compartment_virtual",
+                                  "fields": [
+                                    {
+                                      "name": "amount",
+                                      "type": [
+                                        "null",
+                                        "double"
+                                      ],
+                                      "default": null
+                                    }
+                                  ]
+                                }
+                              ],
+                              "default": null
+                            }
+                          ]
+                        }
+                      ],
+                      "default": null
+                    }
+                  ]
+                }
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "potentialWinnings",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "Wager_potentialWinnings",
+          "fields": [
+            {
+              "name": "amount",
+              "type": [
+                "null",
+                "double"
+              ],
+              "default": null
+            },
+            {
+              "name": "wallet",
+              "type": [
+                "null",
+                {
+                  "type": "record",
+                  "name": "Wager_potentialWinnings_wallet",
+                  "fields": [
+                    {
+                      "name": "compartment",
+                      "type": [
+                        "null",
+                        {
+                          "type": "record",
+                          "name": "Wager_potentialWinnings_wallet_compartment",
+                          "fields": [
+                            {
+                              "name": "real",
+                              "type": [
+                                "null",
+                                {
+                                  "type": "record",
+                                  "name": "Wager_potentialWinnings_wallet_compartment_real",
+                                  "fields": [
+                                    {
+                                      "name": "amount",
+                                      "type": [
+                                        "null",
+                                        "double"
+                                      ],
+                                      "default": null
+                                    }
+                                  ]
+                                }
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "virtual",
+                              "type": [
+                                "null",
+                                {
+                                  "type": "record",
+                                  "name": "Wager_potentialWinnings_wallet_compartment_virtual",
+                                  "fields": [
+                                    {
+                                      "name": "amount",
+                                      "type": [
+                                        "null",
+                                        "double"
+                                      ],
+                                      "default": null
+                                    }
+                                  ]
+                                }
+                              ],
+                              "default": null
+                            }
+                          ]
+                        }
+                      ],
+                      "default": null
+                    }
+                  ]
+                }
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "gain",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "Wager_gain",
+          "fields": [
+            {
+              "name": "amount",
+              "type": [
+                "null",
+                "double"
+              ],
+              "default": null
+            },
+            {
+              "name": "wallet",
+              "type": [
+                "null",
+                {
+                  "type": "record",
+                  "name": "Wager_gain_wallet",
+                  "fields": [
+                    {
+                      "name": "compartment",
+                      "type": [
+                        "null",
+                        {
+                          "type": "record",
+                          "name": "Wager_gain_wallet_compartment",
+                          "fields": [
+                            {
+                              "name": "real",
+                              "type": [
+                                "null",
+                                {
+                                  "type": "record",
+                                  "name": "Wager_gain_wallet_compartment_real",
+                                  "fields": [
+                                    {
+                                      "name": "amount",
+                                      "type": [
+                                        "null",
+                                        "double"
+                                      ],
+                                      "default": null
+                                    }
+                                  ]
+                                }
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "virtual",
+                              "type": [
+                                "null",
+                                {
+                                  "type": "record",
+                                  "name": "Wager_gain_wallet_compartment_virtual",
+                                  "fields": [
+                                    {
+                                      "name": "amount",
+                                      "type": [
+                                        "null",
+                                        "double"
+                                      ],
+                                      "default": null
+                                    }
+                                  ]
+                                }
+                              ],
+                              "default": null
+                            }
+                          ]
+                        }
+                      ],
+                      "default": null
+                    }
+                  ]
+                }
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "numberOfSelections",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "createdAt",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "updatedAt",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "handledAt",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "acceptedAt",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "timestamp",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "selectedSystems",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "int"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "systemGroupName",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "selectionCombineKey",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "selections",
+      "type": [
+        {
+          "type": "array",
+          "items": {
+            "type": "record",
+            "name": "Selection_selection",
+            "namespace": "models.avro.wager.selections",
+            "fields": [
+              {
+                "name": "id",
+                "type": [
+                  "null",
+                  "long"
+                ],
+                "default": null
+              },
+              {
+                "name": "status",
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+              },
+              {
+                "name": "eventInfo",
+                "type": [
+                  "null",
+                  {
+                    "type": "record",
+                    "name": "Selection_selection_eventInfo",
+                    "fields": [
+                      {
+                        "name": "id",
+                        "type": [
+                          "null",
+                          "long"
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "state",
+                        "type": [
+                          "null",
+                          "string"
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "status",
+                        "type": [
+                          "null",
+                          "string"
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "liveGamePeriod",
+                        "type": [
+                          "null",
+                          {
+                            "type": "record",
+                            "name": "Selection_selection_eventInfo_liveGamePeriod",
+                            "fields": [
+                              {
+                                "name": "id",
+                                "type": [
+                                  "null",
+                                  "int"
+                                ],
+                                "default": null
+                              },
+                              {
+                                "name": "name",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ],
+                                "default": null
+                              }
+                            ]
+                          }
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "liveMinute",
+                        "type": [
+                          "null",
+                          "int"
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "startDate",
+                        "type": [
+                          "null",
+                          "string"
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "sport",
+                        "type": [
+                          "null",
+                          {
+                            "type": "record",
+                            "name": "Selection_selection_eventInfo_sport",
+                            "fields": [
+                              {
+                                "name": "id",
+                                "type": [
+                                  "null",
+                                  "int"
+                                ],
+                                "default": null
+                              },
+                              {
+                                "name": "name",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ],
+                                "default": null
+                              }
+                            ]
+                          }
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "country",
+                        "type": [
+                          "null",
+                          {
+                            "type": "record",
+                            "name": "Selection_selection_eventInfo_country",
+                            "fields": [
+                              {
+                                "name": "id",
+                                "type": [
+                                  "null",
+                                  "int"
+                                ],
+                                "default": null
+                              },
+                              {
+                                "name": "name",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ],
+                                "default": null
+                              }
+                            ]
+                          }
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "league",
+                        "type": [
+                          "null",
+                          {
+                            "type": "record",
+                            "name": "Selection_selection_eventInfo_league",
+                            "fields": [
+                              {
+                                "name": "id",
+                                "type": [
+                                  "null",
+                                  "long"
+                                ],
+                                "default": null
+                              },
+                              {
+                                "name": "name",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ],
+                                "default": null
+                              },
+                              {
+                                "name": "format",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ],
+                                "default": null
+                              }
+                            ]
+                          }
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "teams",
+                        "type": [
+                          "null",
+                          {
+                            "type": "record",
+                            "name": "Selection_selection_eventInfo_teams",
+                            "fields": [
+                              {
+                                "name": "home",
+                                "type": [
+                                  "null",
+                                  {
+                                    "type": "record",
+                                    "name": "Selection_selection_eventInfo_teams_home",
+                                    "fields": [
+                                      {
+                                        "name": "id",
+                                        "type": [
+                                          "null",
+                                          "long"
+                                        ],
+                                        "default": null
+                                      },
+                                      {
+                                        "name": "name",
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ],
+                                        "default": null
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "default": null
+                              },
+                              {
+                                "name": "away",
+                                "type": [
+                                  "null",
+                                  {
+                                    "type": "record",
+                                    "name": "Selection_selection_eventInfo_teams_away",
+                                    "fields": [
+                                      {
+                                        "name": "id",
+                                        "type": [
+                                          "null",
+                                          "long"
+                                        ],
+                                        "default": null
+                                      },
+                                      {
+                                        "name": "name",
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ],
+                                        "default": null
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "default": null
+                              }
+                            ]
+                          }
+                        ],
+                        "default": null
+                      }
+                    ]
+                  }
+                ],
+                "default": null
+              },
+              {
+                "name": "lineInfo",
+                "type": [
+                  "null",
+                  {
+                    "type": "record",
+                    "name": "Selection_selection_lineInfo",
+                    "fields": [
+                      {
+                        "name": "id",
+                        "type": [
+                          "null",
+                          "long"
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "index",
+                        "type": [
+                          "null",
+                          "string"
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "updatedAt",
+                        "type": [
+                          "null",
+                          "string"
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "marketType",
+                        "type": [
+                          "null",
+                          {
+                            "type": "record",
+                            "name": "Selection_selection_lineInfo_marketType",
+                            "fields": [
+                              {
+                                "name": "id",
+                                "type": [
+                                  "null",
+                                  "int"
+                                ],
+                                "default": null
+                              },
+                              {
+                                "name": "name",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ],
+                                "default": null
+                              }
+                            ]
+                          }
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "lineEntity",
+                        "type": [
+                          "null",
+                          {
+                            "type": "record",
+                            "name": "Selection_selection_lineInfo_lineEntity",
+                            "fields": [
+                              {
+                                "name": "id",
+                                "type": [
+                                  "null",
+                                  "long"
+                                ],
+                                "default": null
+                              },
+                              {
+                                "name": "name",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ],
+                                "default": null
+                              }
+                            ]
+                          }
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "gamePeriod",
+                        "type": [
+                          "null",
+                          {
+                            "type": "record",
+                            "name": "Selection_selection_lineInfo_gamePeriod",
+                            "fields": [
+                              {
+                                "name": "id",
+                                "type": [
+                                  "null",
+                                  "int"
+                                ],
+                                "default": null
+                              },
+                              {
+                                "name": "name",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ],
+                                "default": null
+                              }
+                            ]
+                          }
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "isValid",
+                        "type": [
+                          "null",
+                          "boolean"
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "spread",
+                        "type": [
+                          "null",
+                          "double"
+                        ],
+                        "default": null
+                      }
+                    ]
+                  }
+                ],
+                "default": null
+              },
+              {
+                "name": "odd",
+                "type": [
+                  "null",
+                  {
+                    "type": "record",
+                    "name": "Selection_selection_odd",
+                    "fields": [
+                      {
+                        "name": "id",
+                        "type": [
+                          "null",
+                          "string"
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "key",
+                        "type": [
+                          "null",
+                          "string"
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "value",
+                        "type": [
+                          "null",
+                          "double"
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "format",
+                        "type": [
+                          "null",
+                          "string"
+                        ],
+                        "default": null
+                      }
+                    ]
+                  }
+                ],
+                "default": null
+              }
+            ]
+          },
+          "default": []
+        },
+        "null"
+      ],
+      "default": []
+    }
+  ]
+}

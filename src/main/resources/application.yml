@@ -1,0 +1,49 @@
+LOG_METADATA_SOURCE: odds-delivery-feed-consumer-example
+
+server:
+  port: 8099
+
+spring:
+  boot:
+    admin:
+      client:
+        enabled: false
+  application:
+    name: ${LOG_METADATA_SOURCE}
+  kafka:
+    properties:
+      application.id: sports.data.streams.processor
+      group_id: sports.data.streams.processor
+      default.deserialization.exception.handler: com.delasport.oddsdelivery.feed.consumer.example.handlers.DeserializationExceptionHandler
+      default.production.exception.handler: com.delasport.oddsdelivery.feed.consumer.example.handlers.StreamRecordProducerExceptionHandler
+      sasl.jaas.config:
+      sasl.mechanism: PLAIN
+      security.protocol: PLAINTEXT
+      client.dns.lookup: use_all_dns_ips
+      max.request.size: 1048576
+      allow.auto.create.topics: true
+      spring.json.trusted.packages: com.delasport.*
+      session.timeout.ms: 45000
+      health-indicator.timeout-ms: 5000
+      auto.register.schemas: true
+      basic.auth.credentials.source:
+      basic.auth.user.info:
+      consumer:
+        auto.offset.reset: latest
+        fetch.max.bytes: 52428800
+        max.poll.records: 500
+        auto.commit.interval.ms: 5000
+        receive.buffer.bytes: 65536
+      commit.interval.ms: 5000
+      num.stream.threads: 2
+      topology.optimization: none
+      cache.max.bytes.buffering: 10485761
+      processing.guarantee: at_least_once
+      replication.factor: 1
+      request.timeout.ms: 60000
+
+sportsdata:
+  computed-settlement-topic: computed.${input.data.type}.sports.stream.delasport.${client.name}.settlements
+  computed-market-topic: computed.${input.data.type}.sports.stream.delasport.${client.name}.markets
+  computed-event-topic: computed.${input.data.type}.sports.stream.delasport.${client.name}.events
+  computed-bet-topic: computed.${input.data.type}.sports.stream.delasport.${client.name}.bets
