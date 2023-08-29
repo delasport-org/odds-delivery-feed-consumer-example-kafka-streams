@@ -2,14 +2,14 @@ spring:
   application:
     name: ${LOG_METADATA_SOURCE}
   kafka:
-    bootstrap-servers:
+    bootstrap-servers: kafka.dev-delasport.com:9094
     properties:
       application.id: local.sports.data.streams.consumer.java
       group_id: local.sports.data.streams.consumer.java
       sasl.mechanism: SCRAM-SHA-512
-      sasl.jaas.config:
+      sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="your-username" password="your-password";
       security.protocol: SASL_SSL
-      schema.registry.url:
+      schema.registry.url: https://schema-registry.dev-delasport.com/
 
 input:
   data:

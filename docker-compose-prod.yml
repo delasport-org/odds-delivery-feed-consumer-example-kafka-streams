@@ -9,8 +9,6 @@ services:
       SPRING_PROFILES_ACTIVE: prod
       input.data.type: json
       avro.serdes.enabled: false
-      client.name:
-      spring.kafka.properties.sasl.jaas.config:
     deploy:
       resources:
         limits:

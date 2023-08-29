@@ -9,7 +9,6 @@ services:
       SPRING_PROFILES_ACTIVE: prod
       input.data.type: avro
       avro.serdes.enabled: true
-      client.name:
     deploy:
       resources:
         limits:
