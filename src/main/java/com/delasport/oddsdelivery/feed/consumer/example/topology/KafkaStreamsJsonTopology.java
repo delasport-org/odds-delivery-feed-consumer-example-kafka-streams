@@ -64,13 +64,5 @@ public class KafkaStreamsJsonTopology {
             log.info("Got Record From Settlement Stream with id {} - {}",  key, value.toString());
         });
 
-        final KStream<String, Wager> betSportsComputedMessageKStream = streamsBuilder.stream(
-                sportsDataConfig.getComputedBetTopic(), Consumed.with(Serdes.String(),
-                        Serdes.serdeFrom(new SchemaRegistrySerializer<>(Wager.class, kafkaConfig),
-                                new SchemaRegistryDeserializer<>(Wager.class, kafkaConfig))));
-
-        betSportsComputedMessageKStream.peek((key, value) -> {
-            log.info("Got Record From Bet Stream with id {} - {}",  key, value.toString());
-        });
     }
 }

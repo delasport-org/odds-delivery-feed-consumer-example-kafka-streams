@@ -9,6 +9,7 @@ services:
       SPRING_PROFILES_ACTIVE: dev
       input.data.type: json
       avro.serdes.enabled: false
+      client.name: demo2
     deploy:
       resources:
         limits:
