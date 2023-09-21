@@ -32,4 +32,5 @@ public class EventSportsComputedMessage {
 
     private String timestamp;
 
+    private String additionalInfo;
 }
