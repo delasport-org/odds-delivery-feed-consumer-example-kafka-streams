@@ -449,6 +449,14 @@
         "string"
       ],
       "default": null
+    },
+    {
+      "name": "additionalInfo",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
     }
   ]
 }
