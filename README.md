@@ -8,13 +8,11 @@
 * install docker-compose
 
 ### How to start the application to consume from JSON topics
-* In order to run the application using kafka dev run docker-compose -f docker-compose-dev.yml in the terminal
-* In order to run the application using kafka prod run docker-compose -f docker-compose-prod.yml in the terminal
+* In order to run the application run docker-compose -f docker-compose-prod.yml up in the terminal
 * After a successful build you will start seeing data coming 
 
 ### How to start the application to consume from AVRO topics
-* In order to run the application using kafka dev run docker-compose -f docker-compose-avro-dev.yml in the terminal
-* In order to run the application using kafka prod run docker-compose -f docker-compose-avro-prod.yml in the terminal
+* In order to run the application run docker-compose -f docker-compose-avro-prod.yml up in the terminal
 * After a successful build you will start seeing data coming 
 
 ### Models of the computed messages
