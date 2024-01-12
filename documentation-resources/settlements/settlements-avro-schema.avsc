@@ -344,6 +344,14 @@
               "default": null
             },
             {
+              "name": "marketStatus",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
               "name": "updatedAt",
               "type": [
                 "null",

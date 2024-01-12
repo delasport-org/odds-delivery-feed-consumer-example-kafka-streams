@@ -124,6 +124,27 @@
                 "string"
               ],
               "default": null
+            },
+            {
+              "name": "device",
+              "type": [
+                "null",
+                {
+                  "type": "record",
+                  "name": "Wager_session_device",
+                  "fields": [
+                    {
+                      "name": "ipAddress",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null
+                    }
+                  ]
+                }
+              ],
+              "default": null
             }
           ]
         }
@@ -608,6 +629,87 @@
         "string"
       ],
       "default": null
+    },
+    {
+      "name": "cashOutRequests",
+      "type": [
+        {
+          "type": "array",
+          "items": {
+            "type": "record",
+            "name": "CashOutRequest",
+            "fields": [
+              {
+                "name": "stake",
+                "type": [
+                  "null",
+                  "double"
+                ],
+                "default": null
+              },
+              {
+                "name": "id",
+                "type": [
+                  "null",
+                  "long"
+                ],
+                "default": null
+              },
+              {
+                "name": "amount",
+                "type": [
+                  "null",
+                  "double"
+                ],
+                "default": null
+              },
+              {
+                "name": "retries",
+                "type": [
+                  "null",
+                  "int"
+                ],
+                "default": null
+              },
+              {
+                "name": "reason",
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+              },
+              {
+                "name": "type",
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+              },
+              {
+                "name": "status",
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+              },
+              {
+                "name": "updatedAt",
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+              }
+            ]
+          },
+          "default": []
+        },
+        "null"
+      ],
+      "default": []
     },
     {
       "name": "selections",
