@@ -13,11 +13,13 @@ spring:
 
 input:
   data:
-    type:
+    type: avro
 
 avro:
   serdes:
-    enabled:
+    enabled: true
 
-client:
-  name:
+sportsdata:
+  computed-settlement-topic: stream.avro.delasport.sports.settlements.snapshot
+  computed-market-topic: stream.avro.delasport.sports.markets.snapshot
+  computed-event-topic: stream.avro.delasport.sports.events.snapshot

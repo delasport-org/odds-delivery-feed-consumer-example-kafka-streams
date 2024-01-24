@@ -43,11 +43,11 @@ public class KafkaStreamsAvroTopology {
 
         streamsBuilderFactoryBean.setStreamsUncaughtExceptionHandler(new UncaughtExceptionHandler());
 
-        builder.stream(sportsDataConfig.getComputedBetTopic(), Consumed.with(Serdes.String(), wagerSpecificAvroSerde))
-
-                .peek((key, value) -> {
-                    log.info("Got Record From Bet Stream with id {} - {}", key, value.toString());
-                });
+//        builder.stream(sportsDataConfig.getComputedBetTopic(), Consumed.with(Serdes.String(), wagerSpecificAvroSerde))
+//
+//                .peek((key, value) -> {
+//                    log.info("Got Record From Bet Stream with id {} - {}", key, value.toString());
+//                });
 
         builder.stream(sportsDataConfig.getComputedEventTopic(), Consumed.with(Serdes.String(), eventSportsStreamMessageSpecificAvroSerde))
 
