@@ -1,0 +1,151 @@
+{
+  "origin": {
+    "stream": "bet",
+    "type": "sportsBet",
+    "environment": "prod",
+    "version": "1.1.0"
+  },
+  "id": 79986204,
+  "type": "single",
+  "status": "running",
+  "source": "mobile",
+  "member": {
+    "id": 0,
+    "username": "member"
+  },
+  "session": {
+    "id": "sessionId",
+    "device": {
+      "ipAddress": " "
+    }
+  },
+  "currency": {
+    "id": 3,
+    "name": "GBP",
+    "exchangeRate": 0.85037255334506
+  },
+  "brand": {
+    "id": 0,
+    "name": "brand"
+  },
+  "odds": {
+    "player": {
+      "format": "fractional",
+      "value": 4.5
+    },
+    "system": {
+      "format": "fractional",
+      "value": 4.5
+    }
+  },
+  "stake": {
+    "amount": 10,
+    "wallet": {
+      "compartment": {
+        "real": {
+          "amount": 10
+        },
+        "virtual": {
+          "amount": 0
+        }
+      }
+    }
+  },
+  "potentialWinnings": {
+    "amount": 35,
+    "wallet": {
+      "compartment": {
+        "real": {
+          "amount": 35
+        },
+        "virtual": {
+          "amount": 0
+        }
+      }
+    }
+  },
+  "gain": {
+    "amount": 0,
+    "wallet": {
+      "compartment": {
+        "real": {
+          "amount": 0
+        },
+        "virtual": {
+          "amount": 0
+        }
+      }
+    }
+  },
+  "numberOfSelections": 1,
+  "createdAt": "2024-02-13 14:57:39.000+0000",
+  "updatedAt": "2024-02-13 14:57:40.000+0000",
+  "handledAt": "1970-01-01 00:00:00.000+0000",
+  "acceptedAt": "2024-02-13 14:57:40.000+0000",
+  "timestamp": "2024-02-13 14:57:40.240+0000",
+  "cashOutRequests": [],
+  "selections": [
+    {
+      "id": 79986204,
+      "status": "pending",
+      "eventInfo": {
+        "id": 7200308,
+        "state": "early",
+        "status": "active",
+        "liveGamePeriod": {
+          "id": 0,
+          "name": "''"
+        },
+        "liveMinute": 0,
+        "startDate": "2024-02-13 15:00:00.000",
+        "sport": {
+          "id": 22,
+          "name": "Horse Racing"
+        },
+        "country": {
+          "id": 229,
+          "name": "United Kingdom"
+        },
+        "league": {
+          "id": 10946,
+          "name": "Lingfield "
+        },
+        "teams": {
+          "home": {
+            "id": 183489,
+            "name": "Horse Racing - Home Team | Race 3"
+          },
+          "away": {
+            "id": 183490,
+            "name": "Horse Racing - Away Team | Race 3"
+          }
+        }
+      },
+      "lineInfo": {
+        "id": 558246644,
+        "index": "",
+        "updatedAt": "",
+        "marketType": {
+          "id": 81,
+          "name": "Race Winner"
+        },
+        "lineEntity": {
+          "id": 8,
+          "name": "Points"
+        },
+        "gamePeriod": {
+          "id": 158,
+          "name": "Full Time"
+        },
+        "isValid": true,
+        "spread": 0
+      },
+      "odd": {
+        "id": "e_3620115149",
+        "key": "head_and_heart",
+        "value": 4.5,
+        "format": "fractional"
+      }
+    }
+  ]
+}
